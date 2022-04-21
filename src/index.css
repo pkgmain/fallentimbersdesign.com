@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'MissConfidential';
+    src: url('assets/fonts/missconfidential.eot');
+    src: url('assets/fonts/missconfidential.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/missconfidential.woff2') format('woff2'),
+    url('assets/fonts/missconfidential.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
