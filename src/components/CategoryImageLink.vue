@@ -9,18 +9,18 @@ defineProps({
 <template>
   <a
     :href="href"
-    class="relative w-80 h-96 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 shadow-lg"
+    class="relative flex h-96 w-80 flex-col overflow-hidden rounded-lg p-6 shadow-lg hover:opacity-75"
   >
     <span aria-hidden="true" class="absolute inset-0">
       <img
         :src="src"
         :alt="name"
-        class="w-full h-full object-center object-cover"
+        class="h-full w-full object-cover object-center"
       />
     </span>
 
     <span
-      class="relative mt-auto text-center text-7xl text-black"
+      class="relative mt-auto text-center text-6xl text-black"
       style="font-family: 'MissConfidential', serif"
       >{{ name }}</span
     >

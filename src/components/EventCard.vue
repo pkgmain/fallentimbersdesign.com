@@ -10,13 +10,13 @@ export default {
 
 <template>
   <h1
-    class="text-center text-5xl mb-4"
+    class="mb-4 text-center text-5xl"
     style="font-family: 'MissConfidential', serif"
   >
     Events
   </h1>
 
-  <div class="flex flex-col rounded-lg shadow-lg overflow-hidden border">
+  <div class="flex flex-col overflow-hidden rounded-lg border shadow-lg">
     <img class="w-full p-2" :src="imgUrl" alt="" />
 
     <div class="p-6">
