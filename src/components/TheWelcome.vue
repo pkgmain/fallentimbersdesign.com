@@ -10,12 +10,13 @@ import CustomOrderCard from "@/components/CustomOrderCard.vue";
 
 // BREAKPOINTS
 const breakpoints = useBreakpoints(breakpointsTailwind);
-const sm = breakpoints.smaller("sm");
+const smAndDown = breakpoints.smaller("sm");
+const lgAndDown = breakpoints.smaller("lg");
 </script>
 
 <template>
   <div class="flex flex-row flex-wrap-reverse gap-8">
-    <div class="basis-full lg:basis-1/6">
+    <div class="flex basis-full flex-wrap lg:basis-1/6">
       <div class="mx-auto mb-16 max-w-xs">
         <EventCard :img-url="charmUrl" />
       </div>
@@ -38,15 +39,17 @@ const sm = breakpoints.smaller("sm");
             name="Benches"
             href="/benches"
             :src="img1Url"
-            :class="sm ? 'justify-self-center' : 'justify-self-end'"
+            :class="smAndDown ? 'justify-self-center' : 'justify-self-end'"
           />
           <CategoryImageLink
             name="Signs"
             href="/signs"
             :src="img3Url"
-            :class="sm ? 'justify-self-center' : 'justify-self-start'"
+            :class="smAndDown ? 'justify-self-center' : 'justify-self-start'"
           />
         </div>
+
+        <hr v-if="lgAndDown" class="mt-14" />
       </div>
     </div>
   </div>
