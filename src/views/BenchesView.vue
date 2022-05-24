@@ -2,22 +2,20 @@
 import { ref } from "vue";
 import ImageGrid from "../components/ImageGrid.vue";
 
-const modules = import.meta.glob("../assets/img/benches/*.jpg");
+const modules = import.meta.globEager("../assets/img/benches/*.jpg");
 const images = ref([]);
 
 const alt = "";
 
 for (const m in modules) {
-  modules[m]().then(() => {
-    const src = new URL(m, import.meta.url);
-    images.value.push({ src, alt });
-  });
+  const src = modules[m].default;
+  images.value.push({ src, alt });
 }
 </script>
 
 <template>
   <h1
-    class="mx-auto text-7xl text-center"
+    class="mx-auto text-center text-7xl"
     style="font-family: 'MissConfidential', serif"
   >
     Benches

@@ -24,7 +24,7 @@ import IconMail from "@/components/icons/IconMail.vue";
       leave-to-class="transform opacity-0 scale-95"
     >
       <MenuItems
-        class="origin-top-right absolute right-0 mt-2 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+        class="absolute right-0 mt-2 w-72 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
       >
         <div class="py-1">
           <MenuItem v-slot="{ active }">
@@ -33,12 +33,12 @@ import IconMail from "@/components/icons/IconMail.vue";
               target="_blank"
               :class="[
                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block px-4 py-2 text-sm flex align-middle',
+                'block flex px-4 py-2 align-middle text-sm',
               ]"
             >
               <img
                 :src="instagramLogo"
-                class="w-5 mr-2"
+                class="mr-2 w-5"
                 alt="instagram logo"
                 aria-hidden="true"
               />
@@ -58,7 +58,7 @@ import IconMail from "@/components/icons/IconMail.vue";
             >
               <img
                 :src="facebookLogo"
-                class="w-5 mr-2"
+                class="mr-2 w-5"
                 alt="facebook logo"
                 aria-hidden="true"
               />
@@ -75,7 +75,7 @@ import IconMail from "@/components/icons/IconMail.vue";
                 'flex px-4 py-2 text-sm',
               ]"
             >
-              <IconMail class="block mr-2" />
+              <IconMail class="mr-2 block" />
               <div>fallentimbersdesign@gmail.com</div>
             </a>
           </MenuItem>
