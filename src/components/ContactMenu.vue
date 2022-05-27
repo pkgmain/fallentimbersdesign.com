@@ -3,17 +3,17 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import instagramLogo from "@/assets/img/instagram_logo.svg";
 import facebookLogo from "@/assets/img/facebook_logo.svg";
 import IconChevronDown from "@/components/icons/IconChevronDown.vue";
+import IconChevronUp from "@/components/icons/IconChevronUp.vue";
 import IconMail from "@/components/icons/IconMail.vue";
 </script>
 
 <template>
   <Menu as="div" class="relative inline-block text-left">
-    <div>
-      <MenuButton class="inline-flex justify-center">
-        Contact
-        <IconChevronDown />
-      </MenuButton>
-    </div>
+    <MenuButton class="inline-flex justify-center">
+      Contact
+      <IconChevronDown class="hidden md:block" />
+      <IconChevronUp class="md:hidden" />
+    </MenuButton>
 
     <transition
       enter-active-class="transition ease-out duration-100"
@@ -23,9 +23,7 @@ import IconMail from "@/components/icons/IconMail.vue";
       leave-from-class="transform opacity-100 scale-100"
       leave-to-class="transform opacity-0 scale-95"
     >
-      <MenuItems
-        class="absolute right-0 mt-2 w-72 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-      >
+      <MenuItems class="menu-items">
         <div class="py-1">
           <MenuItem v-slot="{ active }">
             <a
@@ -84,3 +82,9 @@ import IconMail from "@/components/icons/IconMail.vue";
     </transition>
   </Menu>
 </template>
+
+<style scoped>
+.menu-items {
+  @apply absolute right-0 -mt-36 w-72 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none md:mt-2;
+}
+</style>
