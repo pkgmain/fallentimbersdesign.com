@@ -11,4 +11,9 @@ module.exports = {
   env: {
     "vue/setup-compiler-macros": true,
   },
+  ignorePatterns: [
+    "postcss.config.js",
+    "prettier.config.js",
+    "tailwind.config.js",
+  ],
 };

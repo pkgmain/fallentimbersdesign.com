@@ -7,7 +7,7 @@ import TheNav from "@/components/TheNav.vue";
   <div class="h-screen bg-white">
     <TheHeader class="hidden md:block" data-test="desktop-nav" />
 
-    <main class="p-4 md:p-8">
+    <main class="px-4 pt-4 pb-16 sm:pb-4 md:p-8">
       <RouterView />
     </main>
 
