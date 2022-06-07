@@ -1,6 +1,6 @@
 import { ViteSSG } from "vite-ssg";
 import App from "./App.vue";
-import routerOptions from "./router";
+import router from "./router";
 import "./index.css";
 
-export const createApp = ViteSSG(App, routerOptions);
+export const createApp = ViteSSG(App, router);

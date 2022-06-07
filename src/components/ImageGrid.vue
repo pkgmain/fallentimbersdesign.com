@@ -1,4 +1,6 @@
 <script setup>
+import { defineProps } from "vue";
+
 defineProps({ images: { type: Array, default: () => [] } });
 </script>
 
